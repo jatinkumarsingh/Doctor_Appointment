@@ -10,5 +10,8 @@ updates:
           - "*"
         update-types:
           - "major"
-          - "minor"
-          - "patch"
+          - "minor"    ignore:
+      - dependency-name: "@prisma/client"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "prisma"
+        update-types: ["version-update:semver-major"]          - "patch"
